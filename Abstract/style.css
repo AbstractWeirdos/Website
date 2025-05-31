@@ -1,0 +1,128 @@
+:root {
+    --abstract: rgb(12, 168, 77);
+    --abstract-font: 'Permanent Marker', cursive;
+  }
+
+/*text*/
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: black;
+    margin: 0; /* <<< was 40px */
+    padding: 0;
+  }
+  
+  main {
+    padding: 40px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    color: var(--abstract);
+    font-family: var(--abstract-font); /* apply your abstract font */
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+  }
+
+  .content-row {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 40px; /* optional: horizontal padding */
+    align-items: flex-start;
+  }
+
+  .content-row.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .right-image {
+    max-width: 33%;
+  }
+  
+  .main-image {
+    width: 33.33%; /* 1/3 of the space */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .text-block {
+    width: 66.66%; /* 2/3 of the space */
+    text-align: left;
+    color: var(--abstract);
+  }
+  
+  /*nav*/
+  nav {
+    background-color: var(--abstract);
+    padding: 15px 30px;
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .navbar {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: var(--abstract-font);
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /*mobile*/
+  @media (max-width: 768px) {
+    .content-row {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+    }
+  
+    .main-image,
+    .text-block {
+      width: 100%;
+    }
+  
+    .text-block {
+      text-align: center;
+    }
+  }
+
+   /*twitter*/
+  .twitter-link {
+    color: white;
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .twitter-link:hover {
+    color: #ccc;
+  }
+
+
+  
